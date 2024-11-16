@@ -28,7 +28,8 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() throws Exception {
-        SparkSession spark = SparkSession.builder().appName("Icebert Test")
+        SparkSession spark = SparkSession.builder()
+                .appName("Icebert Test")
                 .master("local")
                 .getOrCreate();
 
@@ -39,6 +40,7 @@ public class AppTest {
             spark.sql("CREATE TABLE mycat.default.test_table(id INT) using iceberg");
             spark.sql("insert into mycat.default.test_table values (1)");
             Dataset<Row> ds = spark.sql("select * from  mycat.default.test_table");
+            ds.show();
             assertTrue(ds.count() > 0);
         } finally {
             spark.close();

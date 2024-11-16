@@ -1,5 +1,4 @@
 /target
 /.mvn
-/.vscode
 /spark-warehouse
 /dependency-reduced-pom.xml
