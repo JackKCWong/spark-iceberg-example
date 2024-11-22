@@ -1,0 +1,2 @@
+-- precondition: @exists(describe table_name, column_name)
+-- postcondition: @not_exists(describe table_name, column_name)

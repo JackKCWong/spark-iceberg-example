@@ -2,3 +2,4 @@
 /.mvn
 /spark-warehouse
 /dependency-reduced-pom.xml
+*.parquet
